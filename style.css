@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+
+body, button {
+    font-family: 'Yomogi', cursive;
+    color: black;
+    background-color: #F2F4F3;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h1, .rules, #button-row {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.rules {
+    padding-bottom: 25px;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.english-rules {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.japanese-rules {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.furigana {
+    font-size: 14px;
+    margin-bottom: -2px;
+    margin-top: 0px;
+}
+
+.jp {
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+#button-row {
+    column-gap: 100px;
+}
+
+.image-button {
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    padding: 15px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    transition: transform 250ms;
+    cursor:pointer;
+}
+
+img:hover {
+    transform: translateY(-10px);
+}
+
+h2 {
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+.score-row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 10px;
+}
+
+.user, .computer {
+    display: flex;
+    gap: 5px;
+    font-weight: bold;
+}
+
+#computer-score, #user-score, .computer-text, .user-text {
+    margin: 0;
+}
+
+.user {
+    border-bottom: 2px solid #BC002D;
+}
+
+.computer {
+    border-bottom: 2px solid #6f2da8;
+}
+
+.reset {
+    display: flex;
+    height: 26px;
+}
+
+.reset-text {
+    margin: 0;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.reset-button {
+    transition: all .4s ease;
+    border: 2px solid black;
+    background-color : transparent;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.reset-button:hover {
+    color: #F2F4F3;
+    background-color: black;
+}
+
+.definition {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 50px;
+}
+
+.definition, ul {
+    font-size: 16px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+a {
+    color: black;
+}
+
+span {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}

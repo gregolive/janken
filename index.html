@@ -1,14 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Janken</title>
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+    
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Janken</h1>
+        </header>
+        
+        <div class="rules">
+            <p class="english-rules">To start a game chant...</p>
+            <div class="japanese-rules">
+                <div class="jp-en">
+                    <p class="furigana">Saisho</p>
+                    <p class="jp">最初</p>
+                </div>
+                <div class="jp-en">
+                    <p class="furigana">wa</p>
+                    <p class="jp">は</p>
+                </div>
+                <div class="jp-en">
+                    <p class="furigana">guu</p>
+                    <p class="jp">ぐう！</p>
+                </div>
+                <div class="jp-en">
+                    <p class="furigana">Janken</p>
+                    <p class="jp">じゃんけん</p>
+                </div>
+                <div class="jp-en">
+                    <p class="furigana">pon</p>
+                    <p class="jp">ぽん！</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="button-row">
+            <div>
+                <button class="image-button" id="rock">
+                    <img src="../img/janken-gu.png" alt="">
+                </button>
+                <div class="subtext">
+                    <p class="furigana">guu</p>
+                    <h2>グー</h2>
+                </div>
+            </div>
+            
+            <div>
+                <button class="image-button" id="paper">
+                    <img src="../img/janken-pa.png" alt="">
+                </button>
+                <div class="subtext">
+                    <p class="furigana">paa</p>
+                    <h2>パー</h2>
+                </div>
+            </div>    
+            
+            <div>
+                <button class="image-button" id="scissors">
+                    <img src="../img/janken-choki.png" alt="">
+                </button>
+                <div class="subtext">
+                    <p class="furigana">choki</p>
+                    <h2>チョキ</h2>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="score-row">
+            <div class="user">
+                <p class="user-text">Your score:</p>
+                <p id="user-score">0</p>
+            </div>
+            <div class="computer">
+                <p class="computer-text">Computer score:</p>
+                <p id="computer-score">0</p>
+            </div>
+            <div class="reset">
+                <button class="reset-button">
+                    <p class="reset-text">Reset</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- Explanation of the game -->
+        <div class="definition">
+            <p>Janken (じゃんけん) is the Japanese equivalent of Rock Paper Scissors. The "children's game" is the
+                    means of settling all manner of disputes, disagreements, and debates.</p>
+        </div>
+        <ul style="list-style-type:none">
+            <li>Who gets to eat the last <a href="https://en.wikipedia.org/wiki/Pocky" target="_blank">pocky</a>? <span>Janken</span</li>
+            <li>Who goes first in a game of <a href="https://en.wikipedia.org/wiki/Sugoroku" target="_blank">sugoroku</a>? <span>Janken</span</li>
+            <li>What auction house should auction off my multi-million dollar art collection? <span>Janken...<a 
+                    href="https://www.nytimes.com/2005/04/29/arts/design/rock-paper-payoff-childs-play-wins-auction-house-an-art-sale.html" target="_blank">no really</a></span></li>
+        </ul>
+    </div>
+
+    <!--  
+        <div class="rules">
+            <p class="english-rules">Tie! So we chant...</p>
+            <div class="jp-en">
+                <p class="furigana">Aiko</p>
+                <p class="jp">相子</p>
+            </div>
+            <div class="jp-en">
+                <p class="furigana">desho&nbsp&nbsp</p>
+                <p class="jp">でしょ！</p>
+            </div>
+        </div>
+    -->
     
-    <script src="script.js"></script>
+
 </body>
 </html>
