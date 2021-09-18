@@ -23,7 +23,7 @@ body, button {
     display: flex;
     flex-direction: column;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 h1 {
@@ -71,7 +71,7 @@ h1, .rules, #button-row, .link {
 
 .image-button {
     box-sizing: border-box;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     padding: 15px;
 }
 
@@ -110,16 +110,16 @@ h2 {
 }
 
 .user {
-    border-bottom: 2px solid #BC002D;
+    border-bottom: 3px solid #BC002D;
 }
 
 .computer {
-    border-bottom: 2px solid #6f2da8;
+    border-bottom: 3px solid #202b5a;
 }
 
 .reset {
     display: flex;
-    height: 26px;
+    height: 30px;
 }
 
 .reset-text {
@@ -168,7 +168,6 @@ a {
 }
 
 span {
-    font-size: 18px;
     font-weight: bold;
     font-style: italic;
 }

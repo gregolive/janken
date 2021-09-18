@@ -27,7 +27,7 @@ const btns = Array.from(document.querySelectorAll('#button-row button'));
 // Remove previous border
 function removeBorder() {
     for (let i = 0; i < btns.length; i++) {
-        btns[i].style.border = "2px solid transparent"; 
+        btns[i].style.border = "3px solid transparent"; 
     }
 }
 btns.forEach(button => {
@@ -56,20 +56,20 @@ function stylePage(playerElement, computerElement) {
 
     // Add border colors & change text
     if (playerElement == computerElement) {
-        player.style.borderTop = "2px solid #BC002D";
-        player.style.borderLeft = "2px solid #BC002D";
-        player.style.borderBottom = "2px solid #6f2da8";
-        player.style.borderRight = "2px solid #6f2da8";
+        player.style.borderTop = "3px solid #BC002D";
+        player.style.borderLeft = "3px solid #BC002D";
+        player.style.borderBottom = "3px solid #202b5a";
+        player.style.borderRight = "3px solid #202b5a";
         computer.style.borderRadius = "8px";
 
         tieReplace(english, furigana, japanese);
     } else {
         originalReplace(english, furigana, japanese)
 
-        player.style.border = "2px solid #BC002D";
+        player.style.border = "3px solid #BC002D";
         player.style.borderRadius = "8px";
 
-        computer.style.border = "2px solid #6f2da8";
+        computer.style.border = "3px solid #202b5a";
         computer.style.borderRadius = "8px";
     }
 }
