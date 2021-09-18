@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 
+html, 
+body {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -171,11 +176,12 @@ span {
 .link {
     gap: 10px;
     text-decoration: none;
+    padding: 8px 0;
 }
 
 .github {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
     margin: 0;
     padding: 0;
 }
