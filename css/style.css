@@ -239,9 +239,9 @@ a {
     }
     .score-row {
         font-size: 14px;
-        gap: 6vw;
+        gap: 4vw;
     }
     footer, .container {
-        padding-top: 5vh;
+        padding-top: 8vh;
     }
 }
