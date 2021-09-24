@@ -26,8 +26,15 @@ body, button {
     margin: 0 auto;
 }
 
+header {
+    background-color: #BC002D;
+    color: white;
+}
+
 h1 {
-    font-size: 35px;
+    font-size: 38px;
+    padding: 10px 0;
+    text-shadow: 1px 1px 2px white, 0 0 1em #FFADC0, 0 0 0.2em #FFADC0;
 }
 
 h1, .rules, #button-row, .link {
@@ -37,8 +44,9 @@ h1, .rules, #button-row, .link {
 }
 
 .rules {
-    font-size: 20px;
+    font-size: 22px;
     gap: 10px;
+    margin-bottom: 25px;
 }
 
 .english-rules {
@@ -66,7 +74,7 @@ h1, .rules, #button-row, .link {
 }
 
 #button-row {
-    column-gap: 100px;
+    column-gap: 8vw;
 }
 
 .image-button {
@@ -80,11 +88,11 @@ img {
     width: 150px;
     margin: auto;
     transition: transform 250ms;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .rps:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 h2 {
@@ -95,7 +103,7 @@ h2 {
 .score-row {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 4vw;
     padding-top: 10px;
 }
 
@@ -133,7 +141,7 @@ h2 {
     border: 2px solid black;
     background-color : transparent;
     border-radius: 5px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .reset-button:hover {
@@ -141,39 +149,16 @@ h2 {
     background-color: black;
 }
 
-.definition {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top: 35px;
-}
-
-.definition, ul {
-    font-size: 16px;
-}
-
-ul {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 0;
-}
-
-li {
-    padding-bottom: 5px;
+footer {
+    padding-top: 10vh;
 }
 
 a {
     color: black;
 }
 
-span {
-    font-weight: bold;
-    font-style: italic;
-}
-
 .link {
-    gap: 10px;
+    gap: 5px;
     text-decoration: none;
     padding: 8px 0;
 }
@@ -196,4 +181,67 @@ span {
 .author {
     margin: 0;
     padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    img {
+        height: 125px;
+        width: 125px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .rules {
+        font-size: 20px;
+    }
+    .furigana {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        height: 100px;
+        width: 100px;
+    }
+    .rules {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .english-rules {
+        align-items: center;
+        justify-content: center;
+    }
+    .japanese-rules {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        justify-content: flex-start;
+    }
+    .container {
+        width: 100%;
+    }
+    img {
+        height: 60px;
+        width: 60px;
+    }
+    .english-rules {
+        font-size: 18px;
+    }
+    .jp {
+        font-size: 16px;
+    }
+    .furigana {
+        font-size: 10px;
+    }
+    .score-row {
+        font-size: 14px;
+        gap: 6vw;
+    }
+    footer, .container {
+        padding-top: 5vh;
+    }
 }

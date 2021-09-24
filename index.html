@@ -13,12 +13,11 @@
     
     <script src="script.js" defer></script>
 </head>
-<body>
+<body>    
+    <header>
+        <h1>Janken じゃんけん</h1>
+    </header>
     <div class="container">
-        <header>
-            <h1>Janken</h1>
-        </header>
-        
         <div class="rules">
             <p class="english-rules">To start a game chant...</p>
             <div class="japanese-rules">
@@ -32,7 +31,11 @@
                 </div>
                 <div class="jp-en">
                     <p class="furigana">guu</p>
-                    <p class="jp">ぐう！</p>
+                    <p class="jp">ぐう</p>
+                </div>
+                <div class="jp-en">
+                    <p class="furigana"></p>
+                    <p class="jp">！</p>
                 </div>
                 <div class="jp-en">
                     <p class="furigana">Janken</p>
@@ -40,7 +43,11 @@
                 </div>
                 <div class="jp-en">
                     <p class="furigana">pon</p>
-                    <p class="jp">ぽん！</p>
+                    <p class="jp">ぽん</p>
+                </div>
+                <div class="jp-en">
+                    <p class="furigana"></p>
+                    <p class="jp">！</p>
                 </div>
             </div>
         </div>
@@ -94,16 +101,8 @@
             </div>
         </div>
 
-        <div class="definition">
-            <p>Janken (じゃんけん) is the Japanese equivalent of Rock Paper Scissors. The "children's game" is the
-                    means of settling all manner of disputes, disagreements, and debates.</p>
-        </div>
-        <ul style="list-style-type:none">
-            <li>Who gets to eat the last <a href="https://en.wikipedia.org/wiki/Pocky" target="_blank">pocky</a>? <span>Janken</span</li>
-            <li>Who goes first in a game of <a href="https://en.wikipedia.org/wiki/Sugoroku" target="_blank">sugoroku</a>? <span>Janken</span</li>
-            <li>What auction house should auction off my multi-million dollar art collection? <span>Janken...<a 
-                    href="https://www.nytimes.com/2005/04/29/arts/design/rock-paper-payoff-childs-play-wins-auction-house-an-art-sale.html" target="_blank">no really</a></span></li>
-        </ul>
+        <div class="result"></div>
+
     </div>
     <footer>
         <a href="https://github.com/gregolive" target="_blank" class="link">

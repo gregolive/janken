@@ -1,5 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
+let empty;
 
 // Determine winner
 function playRound(player, computer) {
@@ -35,15 +36,13 @@ btns.forEach(button => {
         removeBorder();
 
         playerSelection = e.target.parentElement.id;
-        console.log(playerSelection);
 
         let computerSelection = computerPlay();
-        console.log(computerSelection);
 
         console.log(playRound(playerSelection, computerSelection));
         stylePage(playerSelection, computerSelection);
-    });
-})
+    })
+});
 
 function stylePage(playerElement, computerElement) {
     // For borders
@@ -85,30 +84,41 @@ reset.addEventListener('click', () => {
 
 function tieReplace(english, furigana, japanese) {
     english.textContent = english.textContent.replace("To start a game chant...","Tie! So we chant...");
-    furigana[0].textContent = furigana[0].textContent.replace("Saisho","Aiko");
-    furigana[1].textContent = furigana[1].textContent.replace("wa","desho");
-    furigana[2].textContent = furigana[2].textContent.replace("guu","");
-    furigana[3].textContent = furigana[3].textContent.replace("Janken","");
-    furigana[4].textContent = furigana[4].textContent.replace("pon","");
-    japanese[0].textContent = japanese[0].textContent.replace("最初","相子");
-    japanese[1].textContent = japanese[1].textContent.replace("は","でしょ！");
-    japanese[2].textContent = japanese[2].textContent.replace("ぐう！","");
-    japanese[3].textContent = japanese[3].textContent.replace("じゃんけん","");
-    japanese[4].textContent = japanese[4].textContent.replace("ぽん！","");
+    furigana[0].textContent = furigana[0].textContent.replace("Saisho","");
+    furigana[1].textContent = furigana[1].textContent.replace("wa","");
+    furigana[2].textContent = furigana[2].textContent.replace("guu","Aiko");
+    if (furigana[3].textContent == "") {
+        furigana[3].textContent = furigana[3].textContent.replace("","desho");
+    }
+    furigana[4].textContent = furigana[4].textContent.replace("Janken","");
+    furigana[5].textContent = furigana[5].textContent.replace("pon","");
+    japanese[0].textContent = japanese[0].textContent.replace("最初","");
+    japanese[1].textContent = japanese[1].textContent.replace("は","");
+    japanese[2].textContent = japanese[2].textContent.replace("ぐう","相子");
+    japanese[3].textContent = japanese[3].textContent.replace("！","でしょ");
+    japanese[4].textContent = japanese[4].textContent.replace("じゃんけん","！");
+    japanese[5].textContent = japanese[5].textContent.replace("ぽん","");
+    japanese[6].textContent = japanese[6].textContent.replace("！","");
 }
 
 function originalReplace(english, furigana, japanese) {
     english.textContent = english.textContent.replace("Tie! So we chant...","To start a game chant...");
-    furigana[0].textContent = furigana[0].textContent.replace("Aiko","Saisho");
-    furigana[1].textContent = furigana[1].textContent.replace("desho","wa");
-    japanese[0].textContent = japanese[0].textContent.replace("相子","最初");
-    japanese[1].textContent = japanese[1].textContent.replace("でしょ！","は");
-    if (japanese[2].textContent == "") {
-        furigana[2].textContent = furigana[2].textContent.replace("","guu");
-        furigana[3].textContent = furigana[3].textContent.replace("","Janken");
-        furigana[4].textContent = furigana[4].textContent.replace("","pon");
-        japanese[2].textContent = japanese[2].textContent.replace("","ぐう！");
-        japanese[3].textContent = japanese[3].textContent.replace("","じゃんけん");
-        japanese[4].textContent = japanese[4].textContent.replace("","ぽん！");
+    furigana[2].textContent = furigana[2].textContent.replace("Aiko","guu");
+    furigana[3].textContent = furigana[3].textContent.replace("desho","");
+
+    japanese[2].textContent = japanese[2].textContent.replace("相子","ぐう");
+    japanese[3].textContent = japanese[3].textContent.replace("でしょ","！");
+    japanese[4].textContent = japanese[4].textContent.replace("！","じゃんけん");
+
+    if (japanese[0].textContent == "") {
+        furigana[0].textContent = furigana[0].textContent.replace("","Saisho");
+        furigana[1].textContent = furigana[1].textContent.replace("","wa");
+        furigana[4].textContent = furigana[4].textContent.replace("","Janken");
+        furigana[5].textContent = furigana[5].textContent.replace("","pon");
+
+        japanese[0].textContent = japanese[0].textContent.replace("","最初");
+        japanese[1].textContent = japanese[1].textContent.replace("","は");
+        japanese[5].textContent = japanese[5].textContent.replace("","ぽん");
+        japanese[6].textContent = japanese[6].textContent.replace("","！");
     }  
 }
